@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const url = 'https://www.swapi.tech/api/starships/';
 
-export default async function GetAllStarships() {
+export const getAllStarships = async function() {
 
     try {
       let resp = await axios.get(url);
@@ -13,18 +13,3 @@ export default async function GetAllStarships() {
       return [];
     }
   };
-
-  //useEffect to get card data and set to state
-  // useEffect(() => {
-  //   getCard();
-  // }, []);
-
-  // const loaded = () => {
-  //   return (
-  //     <div>
-  //       <h2>
-  //         {card.name}
-  //       </h2>
-  //     </div>
-  //   );
-  // }

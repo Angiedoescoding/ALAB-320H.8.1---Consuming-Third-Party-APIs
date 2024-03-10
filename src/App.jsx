@@ -1,25 +1,25 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 //Import different pages
-//import StarShipCard from './components/StarShipCard';
+import StarShipCard from './components/StarShipCard';
 import NavBar from './components/NavBar'
-import GetAllStarships from './services/Swapi.jsx'
+import { getAllStarships } from './services/Swapi.jsx'
 
 
 //Import react router DOM tools
-import { Routes, Route } from 'react-router-dom';
+//import { Routes, Route } from 'react-router-dom';
 
 function App() {
 
-
+  
 
   return (
     <> 
       <NavBar />
-    hello test
-      <Routes>
+    <div>
 
-      </Routes>
+
+    </div>
     </>
   )
 }
