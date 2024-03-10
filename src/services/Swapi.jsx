@@ -1,34 +1,30 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
-function GetAllStarships() {
-  const [card, setCard] = useState(null);
-  const url = 'https://www.swapi.tech/api/starships/';
+const url = 'https://www.swapi.tech/api/starships/';
 
-  async function getCard() {
+export default async function GetAllStarships() {
+
     try {
-      let result = await axios.get(url);
-      setCard(result.data);
+      let resp = await axios.get(url);
+      return resp.data.results;
     } catch (err) {
-      console.error("Error fetching starships", err);
+      console.error("Error fetching starships.", err);
+      return [];
     }
-  }
-
-  //useEffect to get card data and set to state
-  useEffect(() => {
-    getCard();
-  }, []);
-
-  const loaded = () => {
-    return (
-      <div>
-        <h2>
-          {card.name}
-        </h2>
-      </div>
-    );
   };
 
-}
+  //useEffect to get card data and set to state
+  // useEffect(() => {
+  //   getCard();
+  // }, []);
 
-export default GetAllStarships;
+  // const loaded = () => {
+  //   return (
+  //     <div>
+  //       <h2>
+  //         {card.name}
+  //       </h2>
+  //     </div>
+  //   );
+  // }
