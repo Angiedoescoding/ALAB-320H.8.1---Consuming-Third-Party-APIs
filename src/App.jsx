@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 //Import different pages
 import StarShipCard from './components/StarShipCard';
+import Swapi from './services/Swapi'
 
 
 //Import react router DOM tools
@@ -16,7 +17,7 @@ function App() {
       <StarShipCard />
       <Routes>
     hello test
-        {/* <Route path='/' element={< />} /> */}
+        <Route path='/starships/' element={<Swapi />} />
         {/* <Route path='/' element={< />} />
         <Route path='/' element={< />} />
         <Route path='/' element={< />} /> */}
