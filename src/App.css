@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* padding: 2rem; */
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(30, 29, 29);
+  color: white;
+  padding: 15px;
+  font-size: 2em;
+  margin: 0 auto;
+}
