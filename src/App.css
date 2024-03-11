@@ -14,3 +14,19 @@
   font-size: 2em;
   margin: 0 auto;
 }
+
+.starships {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.starShipCard {
+  width: 30%;
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: darkcyan;
+  color: aliceblue;
+}
