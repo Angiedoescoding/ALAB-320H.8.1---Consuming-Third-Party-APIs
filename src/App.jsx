@@ -4,24 +4,28 @@ import './App.css'
 import StarShipCard from './components/StarShipCard';
 import NavBar from './components/NavBar'
 import { getAllStarships } from './services/Swapi.jsx'
-
-
-//Import react router DOM tools
-//import { Routes, Route } from 'react-router-dom';
+import { useStarships } from './services/Starships.jsx';
 
 function App() {
-
+  const { starships, isLoading, error } = useStarships();
   
 
   return (
     <> 
       <NavBar />
     <div>
-
-
+      {/* {isLoading && <p>Loading...</p>} */}
+      {error && <p>Error: {error}</p>}
+      {starships.length > 0 && (
+        <div className='starships'>
+          {starships.map((starship) => (
+            <StarShipCard starship={starship}/>
+          ))}
+        </div>
+      )}
     </div>
     </>
-  )
+  );
 }
 
 export default App
